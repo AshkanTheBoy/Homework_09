@@ -1,3 +1,4 @@
+package Labs;
 
 public class Task_11 {
     static int[] order = {2,3,5,3,6};

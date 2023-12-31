@@ -1,10 +1,11 @@
-
+package Labs;
 import java.util.Arrays;
 
 public class Task_10 {
-    static double y = 3.14;
+    static double y = 1;
     public static void main(String[] args) {
-        double[] order = {1,2,3,-1,4,-5};
+        double[] order = {1,2,3,-1,4,-5,-6,7,8,9,10};
+        Arrays.sort(order);
         double[][] results = makeAndFillArray(order);
         System.out.println("ALL POSSIBLE COMBINATIONS ARE: ");
         printOrder(results);
@@ -60,20 +61,20 @@ public class Task_10 {
         int[][] numbersOrder;
         for (double[] unit: results){
             if (unit[3]==findMinDiff(results)) {
+                System.out.println(Arrays.toString(unit));
                 count++;
-                numbersOrder = new int[count][2];
-                for (int i = 0; i < numbersOrder.length; i++) {
-                    numbersOrder[i][0] = (int)unit[0];
-                    numbersOrder[i][1] = (int)unit[1];
-                }
+//                numbersOrder = new int[count][2];
+//                for (int i = 0; i < numbersOrder.length; i++) {
+//                    numbersOrder[i][0] = (int)unit[0];
+//                    numbersOrder[i][1] = (int)unit[1];
+//                }
 
             }
         }
-        numbersOrder = new int[count][2];
+        numbersOrder = new int[(int)Math.round(count/2.)][2];
         int index = 0;
         for (double[] unit: results){
             if (unit[3]==findMinDiff(results)) {
-                System.out.println(Arrays.toString(unit));
                 if (index>= numbersOrder.length) {
                     break;
                 } else {
