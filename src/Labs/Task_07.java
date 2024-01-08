@@ -1,7 +1,10 @@
 package Labs;
 
 import java.util.Arrays;
-
+/*
+Дана последовательность чисел.
+Найти положительную подпоследовательность наибольшей длины
+ */
 public class Task_07 {
     public static void main(String[] args) {
         int[] arr = {-1,-1,-1,-1,5,5,5,-7,6,6,6,6,-3,1,2,3,4,5,-5,9,8,7,6,5,4};

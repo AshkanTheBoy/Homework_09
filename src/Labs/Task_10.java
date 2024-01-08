@@ -1,6 +1,9 @@
 package Labs;
 import java.util.Arrays;
-
+/*
+В последовательности чисел найти два числа, среднее
+арифметическое которых ближе всего к числу у
+ */
 public class Task_10 {
     static double y = 1;
     public static void main(String[] args) {

@@ -14,9 +14,9 @@ import java.util.Arrays;
 Вывести все элементы-лидеры в массиве. Лидером назовем такой элемент, который больше всех элементов справа от него.+
  */
 public class Various_Tasks {
-    static int[] order = {9,10,111,9,0,1,1,2,3,2,1,0,-1};
+    static int[] order = {0,1,2,3,4,5,6,7};
 
-    static int sum0 = 4;
+    static int sum0 = 6;
 
     public static void main(String[] args) {
         //1
@@ -31,8 +31,6 @@ public class Various_Tasks {
 //        Arrays.sort(order);
 //        int[] newOrder = uniqueNums(countRepeats(order));
 //        System.out.println(Arrays.toString(newOrder));
-//        int[][] allMatches = makeAndFillArray(newOrder);
-//        System.out.println(Arrays.deepToString(allMatches));
 //        printResult(makeAndFillArray(newOrder));
 
         //4 - skip
@@ -41,7 +39,7 @@ public class Various_Tasks {
 //        System.out.println("INITIAL ORDER: "+Arrays.toString(order));
 //        Arrays.sort(order);
 //        System.out.println("SORTED ORDER: "+Arrays.toString(order));
-//        System.out.println("REQUIRED DIFFERENCE: "+getSequence(order));
+//        System.out.println("REQUIRED DIFFERENCE: "+ getDifference(order));
 //        double[] realOrder = getRealOrder(order);
 //        System.out.println("REQUIRED SEQUENCE: "+Arrays.toString(realOrder));
 //        System.out.println();
@@ -201,7 +199,7 @@ public class Various_Tasks {
         return results;
     }
 
-    static double getSequence(double[] order) {
+    static double getDifference(double[] order) {
         double result;
         if (order[1] - order[0] == order[order.length - 1] - order[order.length - 2]) {
             result = order[1] - order[0];
@@ -213,9 +211,9 @@ public class Various_Tasks {
 
     static double[] getRealOrder(double[] order) {
         double[] realOrder = new double[order.length + 1];
-        Arrays.fill(realOrder, getSequence(order));
+        Arrays.fill(realOrder, getDifference(order));
         for (int i = 0; i < realOrder.length; i++) {
-            realOrder[i] += getSequence(order) * i;
+            realOrder[i] += getDifference(order) * i;
         }
         return realOrder;
     }

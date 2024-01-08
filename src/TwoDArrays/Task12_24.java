@@ -20,6 +20,7 @@ import java.util.Arrays;
 public class Task12_24 {
     public static void main(String[] args) {
         //a
+
         int[][] order = new int[6][6];
         for (int i = 1; i < order.length; i++) {
             Arrays.fill(order[i],1);
@@ -30,6 +31,14 @@ public class Task12_24 {
         }
 
         //b
+        /*
+        [1, 2, 3, 4, 5, 6]
+        [2, 3, 4, 5, 6]
+        [3, 4, 5, 6]
+        [4, 5, 6]
+        [5, 6]
+        [6]
+         */
         System.out.println();
         for (int i = 0; i < order.length; i++) {
             Arrays.fill(order[i],0);
@@ -37,6 +46,14 @@ public class Task12_24 {
                 order[i][j] = i+j+1;
             }
         }
+        /*
+        [1, 2, 3, 4, 5, 6]
+        [2, 3, 4, 5, 6,| 1]
+        [3, 4, 5, 6,| 1, 2]
+        [4, 5, 6,| 1, 2, 3]
+        [5, 6,| 1, 2, 3, 4]
+        [6,| 1, 2, 3, 4, 5]
+         */
         for (int i = order.length-1,k = 0; i > 0; i--, k++) {
             for (int j = order.length-1; j > k; j--) {
                 order[i][j] = j-k;

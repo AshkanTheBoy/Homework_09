@@ -1,5 +1,8 @@
 package Labs;
-
+/*
+Дана последовательность целых чисел. Выяснить, является ли
+она симметричной последовательностью простых чисел
+ */
 public class Task_11 {
     static int[] order = {2,3,5,3,6};
     public static void main(String[] args) {
